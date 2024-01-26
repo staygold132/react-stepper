@@ -1,0 +1,32 @@
+@import '../constants/variables.scss';
+
+.app-survey-component {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &-img {
+      width: 100px;
+      height: 100px;
+      border-radius: $border-radius;
+    }
+  }
+
+  &__ribbon {
+    border-bottom: 2px solid $color-brand2;
+  }
+}
