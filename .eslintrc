@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": ["import"],
+  "extends": ["plugin:prettier/recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "react/jsx-no-target-blank": 0,
+    "prettier/prettier": [1],
+    "no-console": "warn",
+    "no-eval": "error",
+    "import/first": "error",
+    "quote-props": [2, "as-needed"],
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ]
+  }
+}
