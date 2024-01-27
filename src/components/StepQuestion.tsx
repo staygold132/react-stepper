@@ -6,6 +6,7 @@ interface IProps {
   question: string
   inputType: string
   options?: IStepQuestionOption[]
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 interface IStepQuestionOption {
@@ -24,7 +25,12 @@ const StepQuestion = (props: IProps) => {
               props.options.map((option, index) => {
                 return (
                   <div key={index} className="app-survey-step-question__input-radio-option">
-                    <AppRadio id={`${index}-${option.value}`} name={props.question} value={option.value} />
+                    <AppRadio
+                      id={`${index}-${option.value}`}
+                      name={props.question}
+                      value={option.value}
+                      onChange={props.onChange}
+                    />
                     <label
                       htmlFor={`${index}-${option.value}`}
                       className="app-survey-step-question__input-radio-option-label"
@@ -38,7 +44,7 @@ const StepQuestion = (props: IProps) => {
         )}
         {props.inputType === 'input' && (
           <div className="app-survey-step-question__input-text">
-            <AppInput type="textarea" />
+            <AppInput name={props.question} onChange={props.onChange} />
           </div>
         )}
       </div>

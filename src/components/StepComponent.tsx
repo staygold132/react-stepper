@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 
 import AppButton from './AppButton'
@@ -37,26 +37,56 @@ const StepComponent = (props: IProps) => {
     'app-survey-component__footer--alight-center': props.currentStep === 5,
   })
 
+  const [formData, setFormData] = useState({})
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    props.handleNextStep()
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value,
+    })
+  }
+
+  const handleFinalSubmit = () => {
+    props.handleSubmit()
+
+    console.table(formData)
+  }
+
   return (
     <div className="app-survey-step">
-      {props.stepData.questions.map((question, index) => {
-        return (
-          <StepQuestion
-            key={index}
-            question={question.question}
-            inputType={question.inputType}
-            options={question.options}
-          />
-        )
-      })}
-      <div className="app-survey-step__ribbon"></div>
-      <div className={footerClasses}>
-        {props.currentStep > 1 && props.currentStep < 5 && (
-          <AppButton onClick={props.handlePreviousStep}>Previous Step</AppButton>
-        )}
-        {props.currentStep < 5 && <AppButton onClick={props.handleNextStep}>Next Step</AppButton>}
-        {props.currentStep === 5 && <AppButton onClick={props.handleSubmit}>Submit</AppButton>}
-      </div>
+      <form onSubmit={handleFormSubmit}>
+        {props.stepData.questions.map((question, index) => {
+          return (
+            <StepQuestion
+              key={index}
+              question={question.question}
+              inputType={question.inputType}
+              options={question.options}
+              onChange={handleChange}
+            />
+          )
+        })}
+        <div className="app-survey-step__ribbon"></div>
+        <div className={footerClasses}>
+          {props.currentStep > 1 && props.currentStep < 5 && (
+            <AppButton type="button" onClick={props.handlePreviousStep}>
+              Previous Step
+            </AppButton>
+          )}
+          {props.currentStep < 5 && <AppButton type="submit">Next Step</AppButton>}
+          {props.currentStep === 5 && (
+            <AppButton type="button" onClick={handleFinalSubmit}>
+              Submit
+            </AppButton>
+          )}
+        </div>
+      </form>
     </div>
   )
 }
