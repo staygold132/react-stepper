@@ -24,8 +24,13 @@ const StepQuestion = (props: IProps) => {
               props.options.map((option, index) => {
                 return (
                   <div key={index} className="app-survey-step-question__input-radio-option">
-                    <AppRadio name={props.question} value={option.value} />
-                    <label className="app-survey-step-question__input-radio-option-label">{option.option}</label>
+                    <AppRadio id={`${index}-${option.value}`} name={props.question} value={option.value} />
+                    <label
+                      htmlFor={`${index}-${option.value}`}
+                      className="app-survey-step-question__input-radio-option-label"
+                    >
+                      {option.option}
+                    </label>
                   </div>
                 )
               })}

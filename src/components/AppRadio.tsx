@@ -4,12 +4,14 @@ interface IProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   name: string
   value: string
+  id: string
 }
 
 const AppRadio = (props: IProps) => {
   return (
     <div className="app-radio">
       <input
+        id={props.id}
         type="radio"
         name={props.name}
         value={props.value}
