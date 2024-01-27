@@ -1,0 +1,19 @@
+@import '../constants/variables.scss';
+
+.app-survey-complete {
+  &__ribbon {
+    border-bottom: 2px solid $color-brand2;
+  }
+
+  &__content {
+    padding: 20px 0;
+
+    &-item {
+      margin-bottom: 20px;
+
+      &--bold {
+        font-weight: 700;
+      }
+    }
+  }
+}

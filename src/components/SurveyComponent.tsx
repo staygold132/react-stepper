@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import classNames from 'classnames'
 import Stepper from '@keyvaluesystems/react-stepper'
 
@@ -14,6 +16,7 @@ import StepComponent from './StepComponent'
 const SurveyComponent = () => {
   const [currentStep, setCurrentStep] = useState(1)
   const currentStepData = stepsData[currentStep.toString() as keyof typeof stepsData]
+  const navigate = useNavigate()
 
   const footerClasses = classNames('app-survey-component__footer', {
     'app-survey-component__footer--alight-right': currentStep === 1,
@@ -66,6 +69,10 @@ const SurveyComponent = () => {
     setCurrentStep(currentStep - 1)
   }
 
+  const handleSubmit = () => {
+    navigate('/survey-complete')
+  }
+
   return (
     <div className="app-survey-component">
       <ContainerComponent>
@@ -85,7 +92,7 @@ const SurveyComponent = () => {
         <div className={footerClasses}>
           {currentStep > 1 && currentStep < 5 && <AppButton onClick={handlePreviousStep}>Previous Step</AppButton>}
           {currentStep < 5 && <AppButton onClick={handleNextStep}>Next Step</AppButton>}
-          {currentStep === 5 && <AppButton>Submit</AppButton>}
+          {currentStep === 5 && <AppButton onClick={handleSubmit}>Submit</AppButton>}
         </div>
       </ContainerComponent>
     </div>
