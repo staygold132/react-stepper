@@ -8,8 +8,12 @@ import ContainerHeader from './ContainerHeader'
 
 import './SurveyComponent.scss'
 
+import stepsData from '../data/steps.json'
+import StepComponent from './StepComponent'
+
 const SurveyComponent = () => {
   const [currentStep, setCurrentStep] = useState(1)
+  const currentStepData = stepsData[currentStep.toString() as keyof typeof stepsData]
 
   const footerClasses = classNames('app-survey-component__footer', {
     'app-survey-component__footer--alight-right': currentStep === 1,
@@ -75,11 +79,7 @@ const SurveyComponent = () => {
           styles={styles}
         ></Stepper>
         <div className="app-survey-component__content">
-          {currentStep === 1 && <div className="app-survey-component__content-step-title">Step 1</div>}
-          {currentStep === 2 && <div className="app-survey-component__content-step-title">Step 2</div>}
-          {currentStep === 3 && <div className="app-survey-component__content-step-title">Step 3</div>}
-          {currentStep === 4 && <div className="app-survey-component__content-step-title">Step 4</div>}
-          {currentStep === 5 && <div className="app-survey-component__content-step-title">Step 5</div>}
+          <StepComponent currentStep={currentStep} stepData={currentStepData} />
         </div>
         <div className="app-survey-component__ribbon"></div>
         <div className={footerClasses}>
