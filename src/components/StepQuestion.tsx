@@ -1,3 +1,7 @@
+import './StepQuestion.scss'
+import AppInput from './AppInput'
+import AppRadio from './AppRadio'
+
 interface IProps {
   question: string
   inputType: string
@@ -12,7 +16,7 @@ interface IStepQuestionOption {
 const StepQuestion = (props: IProps) => {
   return (
     <div className="app-survey-step-question">
-      <div className="app-survey-step-question__question">{props.question}</div>
+      <div className="app-survey-step-question__text">{props.question}</div>
       <div className="app-survey-step-question__input">
         {props.inputType === 'radio' && (
           <div className="app-survey-step-question__input-radio">
@@ -20,8 +24,8 @@ const StepQuestion = (props: IProps) => {
               props.options.map((option, index) => {
                 return (
                   <div key={index} className="app-survey-step-question__input-radio-option">
-                    <input type="radio" name={props.question} value={option.value} />
-                    <label>{option.option}</label>
+                    <AppRadio name={props.question} value={option.value} />
+                    <label className="app-survey-step-question__input-radio-option-label">{option.option}</label>
                   </div>
                 )
               })}
@@ -29,7 +33,7 @@ const StepQuestion = (props: IProps) => {
         )}
         {props.inputType === 'input' && (
           <div className="app-survey-step-question__input-text">
-            <input type="text" />
+            <AppInput type="textarea" />
           </div>
         )}
       </div>
