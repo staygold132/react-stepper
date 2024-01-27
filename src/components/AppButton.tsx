@@ -9,7 +9,7 @@ interface IProps {
 
 const AppButton = (props: IProps) => {
   return (
-    <button className="app-button" onClick={props.onClick}>
+    <button className="app-button" disabled={props.disabled} onClick={props.onClick}>
       <div className="app-button-text">{props.children}</div>
     </button>
   )

@@ -23,4 +23,9 @@
   &:hover {
     border: 1px solid $color-brand1;
   }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
 }

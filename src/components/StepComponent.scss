@@ -1,0 +1,7 @@
+@import '../constants/variables.scss';
+
+.app-survey-step {
+  &__ribbon {
+    border-bottom: 2px solid $color-brand2;
+  }
+}
