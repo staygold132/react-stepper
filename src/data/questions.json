@@ -118,31 +118,31 @@
       {
         "option": "Fair",
         "value": "Fair",
-        "nextQuestion": "4.2",
+        "nextQuestion": "5.2",
         "previousQuestion": "3.1"
       },
       {
         "option": "Light",
         "value": "Light",
-        "nextQuestion": "4.2",
+        "nextQuestion": "5.2",
         "previousQuestion": "3.1"
       },
       {
         "option": "Medium",
         "value": "Medium",
-        "nextQuestion": "4.2",
+        "nextQuestion": "5.2",
         "previousQuestion": "3.1"
       },
       {
         "option": "Tan",
         "value": "Tan",
-        "nextQuestion": "4.2",
+        "nextQuestion": "5.2",
         "previousQuestion": "3.1"
       },
       {
         "option": "Deep",
         "value": "Deep",
-        "nextQuestion": "4.2",
+        "nextQuestion": "5.2",
         "previousQuestion": "3.1"
       }
     ]
@@ -161,36 +161,36 @@
         "option": "Skincare",
         "value": "Skincare",
         "nextQuestion": "2.2",
-        "previousQuestion": "2.1"
+        "previousQuestion": "1.2"
       },
       {
         "option": "Makeup",
         "value": "Makeup",
         "nextQuestion": "2.2",
-        "previousQuestion": "2.1"
+        "previousQuestion": "1.2"
       },
       {
         "option": "Haircare",
         "value": "Haircare",
-        "nextQuestion": "4.1",
-        "previousQuestion": "2.1"
+        "nextQuestion": "2.2",
+        "previousQuestion": "1.2"
       },
       {
         "option": "Fragrance",
         "value": "Fragrance",
-        "nextQuestion": "4.1",
-        "previousQuestion": "2.1"
+        "nextQuestion": "2.2",
+        "previousQuestion": "1.2"
       },
       {
         "option": "Nails",
         "value": "Nails",
-        "nextQuestion": "4.1",
-        "previousQuestion": "2.1"
+        "nextQuestion": "2.2",
+        "previousQuestion": "1.2"
       },
       {
         "option": "Other products",
         "value": "Other products",
-        "nextQuestion": "4.1",
+        "nextQuestion": "2.2",
         "previousQuestion": "2.1"
       }
     ]
@@ -352,31 +352,31 @@
         "option": "1",
         "value": "1",
         "nextQuestion": "5.2",
-        "previousQuestion": "4.2"
+        "previousQuestion": "2.2"
       },
       {
         "option": "2",
         "value": "2",
         "nextQuestion": "5.2",
-        "previousQuestion": "4.2"
+        "previousQuestion": "2.2"
       },
       {
         "option": "3",
         "value": "3",
         "nextQuestion": "5.2",
-        "previousQuestion": "4.2"
+        "previousQuestion": "2.2"
       },
       {
         "option": "4",
         "value": "4",
         "nextQuestion": "5.2",
-        "previousQuestion": "4.2"
+        "previousQuestion": "2.2"
       },
       {
         "option": "5",
         "value": "5",
         "nextQuestion": "5.2",
-        "previousQuestion": "4.2"
+        "previousQuestion": "2.2"
       }
     ]
   },

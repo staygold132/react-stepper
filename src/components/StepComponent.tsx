@@ -7,11 +7,6 @@ import StepQuestion from './StepQuestion'
 
 import './StepComponent.scss'
 
-interface IStep {
-  id: string
-  questions: IStepQuestion[]
-}
-
 interface IStepQuestion {
   id: string
   inputType: string
@@ -30,7 +25,7 @@ interface IProps {
   currentStep: number
   question: IStepQuestion
   handleNextStep: (nextQuestion: string) => void
-  handlePreviousStep: (prevQuestion: string) => void
+  handlePreviousStep: () => void
   handleSubmit: () => void
 }
 
@@ -50,7 +45,7 @@ const StepComponent = (props: IProps) => {
   }
 
   const handlePreviousStep = () => {
-    props.handlePreviousStep(prevQuestion)
+    props.handlePreviousStep()
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
