@@ -8,13 +8,15 @@ import ContainerHeader from '../components/ContainerHeader'
 
 import './Survey.scss'
 
-import stepsData from '../data/steps.json'
+import defaultQuestion from '../data/defaultQuestion.json'
+import questionsData from '../data/questions.json'
 import StepComponent from '../components/StepComponent'
 
 const Survey = () => {
   const [currentStep, setCurrentStep] = useState(1)
-  const currentStepData = stepsData[currentStep.toString() as keyof typeof stepsData]
   const navigate = useNavigate()
+
+  const [currentQuestion, setCurrentQuestion] = useState(defaultQuestion)
 
   const steps = [
     {
@@ -54,11 +56,15 @@ const Survey = () => {
     }),
   }
 
-  const handleNextStep = () => {
+  const handleNextStep = (nextQuestion: string) => {
+    const nextQuestionData = questionsData.find(({ id }) => id === nextQuestion)
+    setCurrentQuestion(nextQuestionData as typeof defaultQuestion)
     setCurrentStep(currentStep + 1)
   }
 
-  const handlePreviousStep = () => {
+  const handlePreviousStep = (prevQuestion: string) => {
+    const prevQuestionData = questionsData.find(({ id }) => id === prevQuestion)
+    setCurrentQuestion(prevQuestionData as typeof defaultQuestion)
     setCurrentStep(currentStep - 1)
   }
 
@@ -81,7 +87,7 @@ const Survey = () => {
         <div className="app-survey-component__content">
           <StepComponent
             currentStep={currentStep}
-            stepData={currentStepData}
+            question={currentQuestion}
             handleNextStep={handleNextStep}
             handlePreviousStep={handlePreviousStep}
             handleSubmit={handleSubmit}

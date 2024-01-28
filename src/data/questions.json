@@ -1,0 +1,388 @@
+[
+  {
+    "id": "1.1",
+    "inputType": "radio",
+    "question": "Please provide your age range:",
+    "options": [
+      {
+        "option": "Under 18",
+        "value": "Under 18",
+        "nextQuestion": "2.1",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "18-24",
+        "value": "18-24",
+        "nextQuestion": "2.1",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "25-34",
+        "value": "25-34",
+        "nextQuestion": "2.1",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "35-44",
+        "value": "35-44",
+        "nextQuestion": "1.2",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "45-54",
+        "value": "45-54",
+        "nextQuestion": "1.2",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "55-64",
+        "value": "55-64",
+        "nextQuestion": "1.2",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "65 or older",
+        "value": "65 or older",
+        "nextQuestion": "1.2",
+        "previousQuestion": "1.1"
+      }
+    ]
+  },
+  {
+    "id": "1.2",
+    "inputType": "radio",
+    "question": "How did you hear about our cosmetics website?",
+    "options": [
+      {
+        "option": "Social media",
+        "value": "Social media",
+        "nextQuestion": "3.1",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "Search engine",
+        "value": "Search engine",
+        "nextQuestion": "3.1",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "Friend or family",
+        "value": "Friend or family",
+        "nextQuestion": "3.1",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "Other",
+        "value": "Other",
+        "nextQuestion": "3.1",
+        "previousQuestion": "1.1"
+      }
+    ]
+  },
+  {
+    "id": "2.1",
+    "inputType": "radio",
+    "question": "What is your skin type?",
+    "options": [
+      {
+        "option": "Dry",
+        "value": "Dry",
+        "nextQuestion": "3.2",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "Normal",
+        "value": "Normal",
+        "nextQuestion": "3.2",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "Oily",
+        "value": "Oily",
+        "nextQuestion": "3.2",
+        "previousQuestion": "1.1"
+      },
+      {
+        "option": "Combination",
+        "value": "Combination",
+        "nextQuestion": "3.2",
+        "previousQuestion": "1.1"
+      }
+    ]
+  },
+  {
+    "id": "2.2",
+    "inputType": "radio",
+    "question": "What is your skin tone?",
+    "options": [
+      {
+        "option": "Fair",
+        "value": "Fair",
+        "nextQuestion": "4.2",
+        "previousQuestion": "3.1"
+      },
+      {
+        "option": "Light",
+        "value": "Light",
+        "nextQuestion": "4.2",
+        "previousQuestion": "3.1"
+      },
+      {
+        "option": "Medium",
+        "value": "Medium",
+        "nextQuestion": "4.2",
+        "previousQuestion": "3.1"
+      },
+      {
+        "option": "Tan",
+        "value": "Tan",
+        "nextQuestion": "4.2",
+        "previousQuestion": "3.1"
+      },
+      {
+        "option": "Deep",
+        "value": "Deep",
+        "nextQuestion": "4.2",
+        "previousQuestion": "3.1"
+      }
+    ]
+  },
+  {
+    "id": "2.3",
+    "inputType": "input",
+    "question": "Describe your current skincare routine. What products do you use regularly?"
+  },
+  {
+    "id": "3.1",
+    "inputType": "radio",
+    "question": "What type of cosmetics are you most interested in purchasing?",
+    "options": [
+      {
+        "option": "Skincare",
+        "value": "Skincare",
+        "nextQuestion": "2.2",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Makeup",
+        "value": "Makeup",
+        "nextQuestion": "2.2",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Haircare",
+        "value": "Haircare",
+        "nextQuestion": "4.1",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Fragrance",
+        "value": "Fragrance",
+        "nextQuestion": "4.1",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Nails",
+        "value": "Nails",
+        "nextQuestion": "4.1",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Other products",
+        "value": "Other products",
+        "nextQuestion": "4.1",
+        "previousQuestion": "2.1"
+      }
+    ]
+  },
+  {
+    "id": "3.2",
+    "inputType": "radio",
+    "question": "What are your favorite brands and why?",
+    "options": [
+      {
+        "option": "Brand 1",
+        "value": "Brand 1",
+        "nextQuestion": "4.2",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Brand 2",
+        "value": "Brand 2",
+        "nextQuestion": "4.2",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Brand 3",
+        "value": "Brand 3",
+        "nextQuestion": "4.2",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Brand 4",
+        "value": "Brand 4",
+        "nextQuestion": "4.2",
+        "previousQuestion": "2.1"
+      },
+      {
+        "option": "Brand 5",
+        "value": "Brand 5",
+        "nextQuestion": "4.2",
+        "previousQuestion": "2.1"
+      }
+    ]
+  },
+  {
+    "id": "4.1",
+    "inputType": "radio",
+    "question": "How often do you shop for cosmetics online?",
+    "options": [
+      {
+        "option": "Never",
+        "value": "Never",
+        "nextQuestion": "5.1",
+        "previousQuestion": "3.1"
+      },
+      {
+        "option": "Rarely",
+        "value": "Rarely",
+        "nextQuestion": "5.1",
+        "previousQuestion": "3.1"
+      },
+      {
+        "option": "Sometimes",
+        "value": "Sometimes",
+        "nextQuestion": "5.1",
+        "previousQuestion": "3.1"
+      },
+      {
+        "option": "Often",
+        "value": "Often",
+        "nextQuestion": "5.1",
+        "previousQuestion": "3.1"
+      },
+      {
+        "option": "Always",
+        "value": "Always",
+        "nextQuestion": "5.1",
+        "previousQuestion": "3.1"
+      }
+    ]
+  },
+  {
+    "id": "4.2",
+    "inputType": "radio",
+    "question": "What factors influence your decision to purchase cosmetics online?",
+    "options": [
+      {
+        "option": "Product reviews",
+        "value": "Product reviews",
+        "nextQuestion": "5.2",
+        "previousQuestion": "2.2"
+      },
+      {
+        "option": "Discounts and promotions",
+        "value": "Discounts and promotions",
+        "nextQuestion": "5.2",
+        "previousQuestion": "2.2"
+      },
+      {
+        "option": "Brand reputation",
+        "value": "Brand reputation",
+        "nextQuestion": "5.2",
+        "previousQuestion": "2.2"
+      },
+      {
+        "option": "Ingredient transparency",
+        "value": "Ingredient transparency",
+        "nextQuestion": "5.2",
+        "previousQuestion": "2.2"
+      },
+      {
+        "option": "Recommendations from influencers or friends",
+        "value": "Recommendations from influencers or friends",
+        "nextQuestion": "5.2",
+        "previousQuestion": "2.2"
+      }
+    ]
+  },
+  {
+    "id": "5.1",
+    "inputType": "radio",
+    "question": "How would you rate your overall experience with our website? (1 being very poor, 5 being excellent)",
+    "options": [
+      {
+        "option": "1",
+        "value": "1",
+        "nextQuestion": "5.1",
+        "previousQuestion": "4.1"
+      },
+      {
+        "option": "2",
+        "value": "2",
+        "nextQuestion": "5.1",
+        "previousQuestion": "4.1"
+      },
+      {
+        "option": "3",
+        "value": "3",
+        "nextQuestion": "5.1",
+        "previousQuestion": "4.1"
+      },
+      {
+        "option": "4",
+        "value": "4",
+        "nextQuestion": "5.1",
+        "previousQuestion": "4.1"
+      },
+      {
+        "option": "5",
+        "value": "5",
+        "nextQuestion": "5.1",
+        "previousQuestion": "4.1"
+      }
+    ]
+  },
+  {
+    "id": "5.2",
+    "inputType": "radio",
+    "question": "How likely are you to recommend our website to a friend or family member? (1 being very unlikely, 5 being very likely)",
+    "options": [
+      {
+        "option": "1",
+        "value": "1",
+        "nextQuestion": "5.2",
+        "previousQuestion": "4.2"
+      },
+      {
+        "option": "2",
+        "value": "2",
+        "nextQuestion": "5.2",
+        "previousQuestion": "4.2"
+      },
+      {
+        "option": "3",
+        "value": "3",
+        "nextQuestion": "5.2",
+        "previousQuestion": "4.2"
+      },
+      {
+        "option": "4",
+        "value": "4",
+        "nextQuestion": "5.2",
+        "previousQuestion": "4.2"
+      },
+      {
+        "option": "5",
+        "value": "5",
+        "nextQuestion": "5.2",
+        "previousQuestion": "4.2"
+      }
+    ]
+  },
+  {
+    "id": "5.3",
+    "inputType": "input",
+    "question": "What improvements, if any, would you suggest for our website to enhance your shopping experience?"
+  }
+]

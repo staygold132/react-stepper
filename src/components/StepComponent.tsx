@@ -22,13 +22,15 @@ interface IStepQuestion {
 interface IStepQuestionOption {
   option: string
   value: string
+  nextQuestion: string
+  previousQuestion: string
 }
 
 interface IProps {
   currentStep: number
-  stepData: IStep
-  handleNextStep: () => void
-  handlePreviousStep: () => void
+  question: IStepQuestion
+  handleNextStep: (nextQuestion: string) => void
+  handlePreviousStep: (prevQuestion: string) => void
   handleSubmit: () => void
 }
 
@@ -39,14 +41,26 @@ const StepComponent = (props: IProps) => {
   })
 
   const [formData, setFormData] = useState({})
+  const [nextQuestion, setNextQuestion] = useState('')
+  const [prevQuestion, setPrevQuestion] = useState('')
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    props.handleNextStep()
+    props.handleNextStep(nextQuestion)
+  }
+
+  const handlePreviousStep = () => {
+    props.handlePreviousStep(prevQuestion)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
+
+    const option = props.question.options?.find((option) => option.value === value)
+
+    setNextQuestion(option?.nextQuestion || '')
+    setPrevQuestion(option?.previousQuestion || '')
+
     setFormData({
       ...formData,
       [name]: value,
@@ -62,22 +76,17 @@ const StepComponent = (props: IProps) => {
   return (
     <div className="app-survey-step">
       <form onSubmit={handleFormSubmit}>
-        {props.stepData.questions.map((question: IStepQuestion, index: number) => {
-          return (
-            <StepQuestion
-              key={index}
-              id={question.id}
-              question={question.question}
-              inputType={question.inputType}
-              options={question.options}
-              onChange={handleChange}
-            />
-          )
-        })}
+        <StepQuestion
+          id={props.question.id}
+          question={props.question.question}
+          inputType={props.question.inputType}
+          options={props.question.options}
+          onChange={handleChange}
+        />
         <div className="app-survey-step__ribbon"></div>
         <div className={footerClasses}>
           {props.currentStep > 1 && props.currentStep < 5 && (
-            <AppButton type="button" onClick={props.handlePreviousStep}>
+            <AppButton type="button" onClick={handlePreviousStep}>
               Previous Step
             </AppButton>
           )}
