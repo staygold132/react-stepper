@@ -73,8 +73,11 @@ const StepComponent = (props: IProps) => {
     console.table(formData) // showing results in console
   }
 
+  const disableNextBtn = !nextQuestion || nextQuestion === props.question.id
+
   return (
     <div className="app-survey-step">
+      Prev Step: {prevQuestion} | Next Step: {nextQuestion} | Current Step: {props.question.id}
       <form onSubmit={handleFormSubmit}>
         <StepQuestion
           id={props.question.id}
@@ -90,7 +93,11 @@ const StepComponent = (props: IProps) => {
               Previous Step
             </AppButton>
           )}
-          {props.currentStep < 5 && <AppButton type="submit">Next Step</AppButton>}
+          {props.currentStep < 5 && (
+            <AppButton disabled={disableNextBtn} type="submit">
+              Next Step
+            </AppButton>
+          )}
           {props.currentStep === 5 && (
             <AppButton type="button" onClick={handleFinalSubmit}>
               Submit
