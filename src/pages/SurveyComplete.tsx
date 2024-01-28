@@ -1,4 +1,3 @@
-import React from 'react'
 import ContainerComponent from '../components/ContainerComponent'
 import ContainerHeader from '../components/ContainerHeader'
 

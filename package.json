@@ -2,7 +2,6 @@
   "name": "react-stepper",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://staygold132.github.io/react-stepper",
   "dependencies": {
     "@keyvaluesystems/react-stepper": "^1.0.4",
     "@testing-library/jest-dom": "^5.17.0",

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './StepQuestion.scss'
 import AppInput from './AppInput'
 import AppRadio from './AppRadio'

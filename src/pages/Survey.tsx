@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
 import Stepper from '@keyvaluesystems/react-stepper'
 
@@ -8,58 +8,36 @@ import ContainerHeader from '../components/ContainerHeader'
 
 import './Survey.scss'
 
-import stepsData from '../data/steps.json'
+import defaultQuestion from '../data/defaultQuestion.json'
+import questionsData from '../data/questions.json'
 import StepComponent from '../components/StepComponent'
 
+import { stepperConfig, stepperStyles } from '../configurations/StepperConfig'
+
 const Survey = () => {
-  const [currentStep, setCurrentStep] = useState(1)
-  const currentStepData = stepsData[currentStep.toString() as keyof typeof stepsData]
   const navigate = useNavigate()
+  const location = useLocation()
+  const { step, question } = useParams()
 
-  const steps = [
-    {
-      stepLabel: 'Step 1',
-      completed: false,
-    },
-    {
-      stepLabel: 'Step 2',
-      completed: false,
-    },
-    {
-      stepLabel: 'Step 3',
-      completed: false,
-    },
-    {
-      stepLabel: 'Step 4',
-      completed: false,
-    },
-    {
-      stepLabel: 'Step 5',
-      completed: false,
-    },
-  ]
+  const presetQuestion = questionsData.find(({ id }) => id === question)
+  const [currentQuestion, setCurrentQuestion] = useState(presetQuestion || defaultQuestion) // added defaultQuestion to prevent error when question is not found
+  const [currentStep, setCurrentStep] = useState(Number(step) || 1)
 
-  const styles = {
-    InactiveLineSeparator: () => ({
-      backgroundColor: '#a61a57',
-    }),
-    InActiveNode: () => ({
-      background: '#000',
-    }),
-    ActiveNode: () => ({
-      backgroundColor: '#a61a57',
-    }),
-    LabelTitle: () => ({
-      display: 'none',
-    }),
-  }
+  useEffect(() => {
+    const selectedQuestion = questionsData.find(({ id }) => id === question)
 
-  const handleNextStep = () => {
-    setCurrentStep(currentStep + 1)
+    if (selectedQuestion) {
+      setCurrentQuestion(selectedQuestion)
+      setCurrentStep(Number(step))
+    }
+  }, [location])
+
+  const handleNextStep = (nextQuestion: string) => {
+    navigate(`/survey/${currentStep + 1}/question/${nextQuestion}`)
   }
 
   const handlePreviousStep = () => {
-    setCurrentStep(currentStep - 1)
+    window.history.back()
   }
 
   const handleSubmit = () => {
@@ -75,13 +53,13 @@ const Survey = () => {
           currentStepIndex={currentStep - 1}
           orientation="horizontal"
           labelPosition="top"
-          steps={steps}
-          styles={styles}
+          steps={stepperConfig}
+          styles={stepperStyles}
         ></Stepper>
         <div className="app-survey-component__content">
           <StepComponent
             currentStep={currentStep}
-            stepData={currentStepData}
+            question={currentQuestion}
             handleNextStep={handleNextStep}
             handlePreviousStep={handlePreviousStep}
             handleSubmit={handleSubmit}

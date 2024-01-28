@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './AppInput.scss'
 
 interface IProps {
