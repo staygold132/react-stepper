@@ -1,3 +1,5 @@
+import React from 'react'
+
 import './StepQuestion.scss'
 import AppInput from './AppInput'
 import AppRadio from './AppRadio'
@@ -23,7 +25,7 @@ const StepQuestion = (props: IProps) => {
         {props.inputType === 'radio' && (
           <div className="app-survey-step-question__input-radio">
             {props.options &&
-              props.options.map((option, index) => {
+              props.options.map((option: IStepQuestionOption, index: number) => {
                 return (
                   <div key={`${index}-${props.id}`} className="app-survey-step-question__input-radio-option">
                     <AppRadio

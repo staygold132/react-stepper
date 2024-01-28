@@ -1,3 +1,5 @@
+import React from 'react'
+
 import './AppRadio.scss'
 
 interface IProps {

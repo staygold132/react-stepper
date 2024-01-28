@@ -10,7 +10,7 @@ function App() {
       <div className="app-main-content">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Navigate to="/survey" />} />
+            <Route path="*" element={<Navigate to="/survey" />} />
             <Route path="/survey" element={<Survey />} />
             <Route path="/survey-complete" element={<SurveyComplete />} />
           </Routes>

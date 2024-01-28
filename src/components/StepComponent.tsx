@@ -56,13 +56,13 @@ const StepComponent = (props: IProps) => {
   const handleFinalSubmit = () => {
     props.handleSubmit()
 
-    console.table(formData)
+    console.table(formData) // showing results in console
   }
 
   return (
     <div className="app-survey-step">
       <form onSubmit={handleFormSubmit}>
-        {props.stepData.questions.map((question, index) => {
+        {props.stepData.questions.map((question: IStepQuestion, index: number) => {
           return (
             <StepQuestion
               key={index}
