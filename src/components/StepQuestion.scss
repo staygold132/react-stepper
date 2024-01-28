@@ -1,0 +1,38 @@
+.app-survey-step-question {
+  margin-bottom: 20px;
+
+  &__text {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__answer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    &-input {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input {
+    &-radio {
+      &-option {
+        display: flex;
+        margin-bottom: 5px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &-label {
+          cursor: pointer;
+          margin-left: 5px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import '../constants/variables';
+
+.app-survey-component {
+  &__ribbon {
+    border-bottom: 2px solid $color-brand2;
+  }
+
+  &__content {
+    padding: 20px 0;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+
+    &--alight-right {
+      justify-content: flex-end;
+    }
+
+    &--alight-left {
+      justify-content: flex-start;
+    }
+
+    &--alight-center {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '../constants/variables';
+
+.app-input {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin-bottom: 20px;
+
+  &__field {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid $color-brand2;
+    border-radius: 5px;
+
+    &:focus {
+      border-color: $color-brand1;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(195, 234, 228);
+  background: radial-gradient(circle, rgba(195, 234, 228, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html {
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
