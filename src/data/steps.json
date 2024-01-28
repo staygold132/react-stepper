@@ -68,52 +68,6 @@
         "question": "Describe your current skincare routine. What products do you use regularly?"
       },
       {
-        "inputType": "checkbox",
-        "question": "What are your skin concerns? (Check all that apply)",
-        "options": [
-          {
-            "option": "Acne",
-            "value": "Acne"
-          },
-          {
-            "option": "Aging",
-            "value": "Aging"
-          },
-          {
-            "option": "Dark spots",
-            "value": "Dark spots"
-          },
-          {
-            "option": "Dryness",
-            "value": "Dryness"
-          },
-          {
-            "option": "Dullness",
-            "value": "Dullness"
-          },
-          {
-            "option": "Oiliness",
-            "value": "Oiliness"
-          },
-          {
-            "option": "Pores",
-            "value": "Pores"
-          },
-          {
-            "option": "Redness",
-            "value": "Redness"
-          },
-          {
-            "option": "Sensitivity",
-            "value": "Sensitivity"
-          },
-          {
-            "option": "Uneven skin tone",
-            "value": "Uneven skin tone"
-          }
-        ]
-      },
-      {
         "inputType": "radio",
         "question": "What is your skin type?",
         "options": [

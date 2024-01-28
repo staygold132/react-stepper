@@ -3,15 +3,15 @@ import { useNavigate } from 'react-router-dom'
 
 import Stepper from '@keyvaluesystems/react-stepper'
 
-import ContainerComponent from './ContainerComponent'
-import ContainerHeader from './ContainerHeader'
+import ContainerComponent from '../components/ContainerComponent'
+import ContainerHeader from '../components/ContainerHeader'
 
-import './SurveyComponent.scss'
+import './Survey.scss'
 
 import stepsData from '../data/steps.json'
-import StepComponent from './StepComponent'
+import StepComponent from '../components/StepComponent'
 
-const SurveyComponent = () => {
+const Survey = () => {
   const [currentStep, setCurrentStep] = useState(1)
   const currentStepData = stepsData[currentStep.toString() as keyof typeof stepsData]
   const navigate = useNavigate()
@@ -92,4 +92,4 @@ const SurveyComponent = () => {
   )
 }
 
-export default SurveyComponent
+export default Survey
