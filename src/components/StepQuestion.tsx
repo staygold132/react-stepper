@@ -3,6 +3,7 @@ import AppInput from './AppInput'
 import AppRadio from './AppRadio'
 
 interface IProps {
+  id: string
   question: string
   inputType: string
   options?: IStepQuestionOption[]
@@ -24,15 +25,15 @@ const StepQuestion = (props: IProps) => {
             {props.options &&
               props.options.map((option, index) => {
                 return (
-                  <div key={index} className="app-survey-step-question__input-radio-option">
+                  <div key={`${index}-${props.id}`} className="app-survey-step-question__input-radio-option">
                     <AppRadio
-                      id={`${index}-${option.value}`}
+                      id={`${props.id}-${option.value}`}
                       name={props.question}
                       value={option.value}
                       onChange={props.onChange}
                     />
                     <label
-                      htmlFor={`${index}-${option.value}`}
+                      htmlFor={`${props.id}-${option.value}`}
                       className="app-survey-step-question__input-radio-option-label"
                     >
                       {option.option}

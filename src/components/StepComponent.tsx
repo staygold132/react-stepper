@@ -13,6 +13,7 @@ interface IStep {
 }
 
 interface IStepQuestion {
+  id: string
   inputType: string
   question: string
   options?: IStepQuestionOption[]
@@ -65,6 +66,7 @@ const StepComponent = (props: IProps) => {
           return (
             <StepQuestion
               key={index}
+              id={question.id}
               question={question.question}
               inputType={question.inputType}
               options={question.options}
