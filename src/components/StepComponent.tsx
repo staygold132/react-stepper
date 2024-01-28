@@ -72,7 +72,6 @@ const StepComponent = (props: IProps) => {
 
   return (
     <div className="app-survey-step">
-      Prev Step: {prevQuestion} | Next Step: {nextQuestion} | Current Step: {props.question.id}
       <form onSubmit={handleFormSubmit}>
         <StepQuestion
           id={props.question.id}
